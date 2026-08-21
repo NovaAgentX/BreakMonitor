@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Clock — Sign In</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ SPLASH / PUNCH INTRO ============ -->
+  <div id="splashScreen">
+    <div class="splash-rings"></div>
+    <div class="splash-rings ring-2"></div>
+    <div class="splash-rings ring-3"></div>
+    <div class="splash-core">
+      <div class="splash-stamp-frame">
+        <div class="splash-impact"></div>
+        <div class="splash-stamp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <polyline points="12 7 12 12 15.5 14"></polyline>
+          </svg>
+        </div>
+      </div>
+      <div class="splash-wordmark">TEAM<span>CLOCK</span></div>
+      <div class="splash-tagline">Login. Logout. Stay in sync.</div>
+      <div class="splash-progress"><div class="splash-progress-bar"></div></div>
+    </div>
+  </div>
+
+  <!-- ============ AUTH SHELL ============ -->
+  <div class="auth-wrap" id="authWrap">
+    <div class="auth-shell">
+
+      <div class="auth-side">
+        <div class="auth-side-brand"><span class="brand-dot"></span> TEAMCLOCK</div>
+        <div>
+          <h1 class="auth-side-headline">One tap to <span>log in</span>,<br>one to log <span>every break</span>.</h1>
+          <p class="auth-side-sub">Sign in with the username and password your Team Lead gave you, and track your login, logout, and break time.</p>
+          <div class="auth-role-chips" id="roleChipsPreview">
+            <span class="role-chip"><span class="dot" style="background:var(--role-teamlead);"></span>Team Lead</span>
+            <span class="role-chip"><span class="dot" style="background:var(--role-seomgr);"></span>SEO Manager</span>
+            <span class="role-chip"><span class="dot" style="background:var(--role-seoexec);"></span>SEO Executive</span>
+            <span class="role-chip"><span class="dot" style="background:var(--role-smmgr);"></span>Social Media Manager</span>
+            <span class="role-chip"><span class="dot" style="background:var(--role-smexec);"></span>Social Media Executive</span>
+            <span class="role-chip"><span class="dot" style="background:var(--role-dev);"></span>Software Developer</span>
+            <span class="role-chip"><span class="dot" style="background:var(--role-dmexec);"></span>Digital Marketing Executive</span>
+            <span class="role-chip"><span class="dot" style="background:var(--role-dmspec);"></span>Digital Marketing Specialist</span>
+          </div>
+        </div>
+        <div style="font-size:11.5px;color:var(--text-faint);">Powered by Google Sheets</div>
+      </div>
+
+      <div class="auth-form-panel">
+        <div class="auth-tabs">
+          <span class="auth-tab-btn active" style="cursor:default;">Sign In</span>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form class="auth-form active" id="loginForm">
+          <div class="field-group">
+            <label class="field-label" for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" class="field-input" placeholder="e.g. arjun.dev" required autocomplete="username">
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="loginPassword">Password</label>
+            <div class="password-field-wrap">
+              <input type="password" id="loginPassword" class="field-input" placeholder="Enter your password" required autocomplete="current-password">
+              <button type="button" class="password-toggle-btn" data-target="loginPassword">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </button>
+            </div>
+          </div>
+          <div class="field-error" id="loginError"></div>
+          <button type="submit" class="btn-machine" id="loginSubmitBtn">Sign In</button>
+        </form>
+
+        <div class="auth-switch-line">
+          Don't have an account? Ask your Team Lead to create one for you.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast-msg" id="toastMsg"><span class="toast-dot"></span><span id="toastText"></span></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
