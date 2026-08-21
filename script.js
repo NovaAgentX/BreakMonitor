@@ -5,7 +5,7 @@
 // 1. Google Apps Script Web App URL
 // REQUIRED: Replace this with your deployed Apps Script Web App URL
 // (Extensions > Apps Script > Deploy > New deployment > Web app > copy URL).
-const API_URL = "https://script.google.com/macros/s/AKfycbwFucprYu7dL90lgKB8q05s3GZDnd8hQJM2EjW1lXZtV5N9gsZhFvvchtJL7st5R-pW/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbx_ZdLPNBYKujV32vBunl0rBXViMCSI9gCvsRMaTyWeTrKgEbYpqEelY__Ph3GIbrP-Ug/exec";
 
 const TOKEN_KEY = "teamclock_token";
 const USER_KEY = "teamclock_user";
